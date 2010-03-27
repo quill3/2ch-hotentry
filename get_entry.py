@@ -20,17 +20,11 @@ if site:
       scorefilled_entry.score = 0
       scorefilled_entry.put()
 ##data add
-    #print result.content
     pattern = re.compile(r'''<li class="users"> <strong><a href="/entry/(.*?)" title="(.*?)">(.*?) users</a></strong></li>
         <li class="timestamp">(.*?)</li>(.*?)
         <cite title="(.*?)"><a href="(.*?)"> 続きを読む</a></cite>''',re.S)
     entry_lists = pattern.findall(result.content)
     for entry_list in entry_lists:
-      #print entry_list[6]
-      #print entry_list[5]
-      #print entry_list[3]
-      #print entry_list[2]
-      #print '<br>'
       query3 = datastores.Entries.gql('WHERE url = :url',url=entry_list[6])
       entry = query3.get()
       if entry:
