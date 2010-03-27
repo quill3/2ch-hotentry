@@ -8,7 +8,7 @@ fetched_entries = query.fetch(30)
 
 print '''<html>
 <head>
-<title>2ch Matome Hot Entry</title>
+<title>2chまとめホットエントリー</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="css/html.css" />
 <link rel="stylesheet" type="text/css" href="css/layout.css" />
