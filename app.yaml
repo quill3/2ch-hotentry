@@ -1,0 +1,18 @@
+application: 2ch-hotentry
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /css
+  static_dir: css
+- url: /img
+  static_dir: img
+- url: /add_site
+  script: add_site.py
+  login: admin
+- url: /get_entry
+  script: get_entry.py
+  login: admin
+- url: /.*
+  script: mainpage.py

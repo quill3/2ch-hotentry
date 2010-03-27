@@ -1,0 +1,4 @@
+cron:
+- description: get_entry
+  url: /get_entry
+  schedule: every 2 minutes
